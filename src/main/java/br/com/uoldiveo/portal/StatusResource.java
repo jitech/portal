@@ -10,7 +10,5 @@ public interface StatusResource {
 	@GET
 	@Path("/status")
 	@Produces(MediaType.APPLICATION_JSON)
-    public default StatusResponse status() {
-        return new StatusResponse("I'm working!");
-    }
+    public StatusResponse status();
 }

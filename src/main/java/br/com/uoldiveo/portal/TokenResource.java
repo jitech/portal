@@ -7,5 +7,7 @@ import javax.ws.rs.Path;
 @RequestScoped
 public class TokenResource implements StatusResource{
 
-	
+	public StatusResponse status() {
+		return new StatusResponse("I'm working!");
+	}
 }
