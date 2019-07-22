@@ -10,4 +10,8 @@ public class TokenResource implements StatusResource{
 	public StatusResponse status() {
 		return new StatusResponse("I'm working!");
 	}
+	
+	public static void main(String[] args) {
+		System.out.println("Hello!!!");
+	}
 }
