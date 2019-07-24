@@ -6,11 +6,20 @@
 	<artifactId>portal-quarkus</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>portal</name>
+	<packaging>jar</packaging>
 	<description>Portal UOL Diveo by Quarkus</description>
 
-	<properties>
+	<!--properties>
 		<java.version>1.8</java.version>
 		<quarkus.version>0.19.1</quarkus.version>
+	</properties-->
+	
+	<properties>
+    	<quarkus.version>0.19.1</quarkus.version>
+    	<surefire-plugin.version>2.22.0</surefire-plugin.version>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
@@ -43,6 +52,17 @@
 	</build>
 	
 	<dependencies>
+		<dependency>
+   			<groupId>org.eclipse.microprofile</groupId>
+   			<artifactId>microprofile</artifactId>
+   			<version>2.1</version>
+   			<scope>provided</scope>
+   			<type>pom</type>
+		</dependency>
+		<dependency>
+   			<groupId>io.quarkus</groupId>
+   			<artifactId>quarkus-arc</artifactId>
+		</dependency>
 		<dependency>
         	<groupId>io.quarkus</groupId>
         	<artifactId>quarkus-resteasy</artifactId>
